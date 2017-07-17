@@ -1,0 +1,21 @@
+<ion-header>
+   <ion-navbar>
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <ion-title (click)="clear()">Categories</ion-title>
+   </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-list>
+      <ion-item *ngFor="let category of allCategories" (click)="showProductsForCategory(category)">
+         <ion-avatar item-start>
+            <img src="assets/images/furniture.jpeg">
+         </ion-avatar>
+         <h2>{{ category }}</h2>
+          <!-- <button ion-button clear item-end (click)="addToCart(product)" *ngIf="!addedToCardIds[toolsService.getUniqueIdForCart(product)]">Add to Cart</button>  -->
+      </ion-item>
+   </ion-list>
+
+</ion-content>

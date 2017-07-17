@@ -1,0 +1,22 @@
+<ion-header>
+   <ion-navbar>
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <ion-title (click)="clear()">All Products</ion-title>
+   </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-list>
+      <ion-item>
+         <ion-avatar item-start>
+            <img src="assets/images/furniture.jpeg">
+         </ion-avatar>
+         <h2>{{product.name}}</h2>
+         <p>{{product.description}}</p>
+         <p>{{product.type}}</p>
+      </ion-item>
+   </ion-list>
+
+</ion-content>
